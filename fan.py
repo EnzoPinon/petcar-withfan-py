@@ -34,4 +34,18 @@ class Fan:
             return print("Please give a valid color. Color should be a string.")
         self.__color = new_color
         return print("You have changed the color of your fan to: ", new_color)
-        
+    
+    def get_status(self):
+        return self.__is_on
+    
+    def set_status(self, new_status):
+        if not type(new_status) is str:
+            return print("This function 'set_status' only accepts string inputs.")
+        if new_status is 'on':
+            self.__is_on = True
+            return print("This fan has been switched on!")
+        if new_status is 'off':
+            self.__is_on = False
+            return print("This fan has been switched off!")
+        else:
+            return print("Please say if this fan will be switched 'on' or 'off'.")
