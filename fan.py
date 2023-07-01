@@ -4,9 +4,9 @@ Fast = 3
 
 class Fan:
 
-    def __init__(self, speed, radius, is_on, color):
+    def __init__(self, speed, radius, on, color):
         self.__speed = speed
-        self.__is_on = is_on
+        self.__is_on = on
         self.__color = color
         self.__radius = radius
     
@@ -26,4 +26,12 @@ class Fan:
         else:
             print("Invalid input. Your input must be 'slow', 'medium', or 'fast'.")
     
+    def get_color(self):
+        return self.__color
+    
+    def set_color(self, new_color):
+        if not type(new_color) is str:
+            return print("Please give a valid color. Color should be a string.")
+        self.__color = new_color
+        return print("You have changed the color of your fan to: ", new_color)
         
