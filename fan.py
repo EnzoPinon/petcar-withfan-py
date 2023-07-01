@@ -49,3 +49,14 @@ class Fan:
             return print("This fan has been switched off!")
         else:
             return print("Please say if this fan will be switched 'on' or 'off'.")
+    
+    def get_radius(self):
+        return self.__radius
+    
+    def set_radius(self, new_radius):
+        try:
+            setting = float(new_radius)
+        except TypeError:
+            return print("This function 'set_radius' only accepts integers and decimals.")
+        self.__radius = setting
+        return print("The fan's radius has been set to: ", setting)
