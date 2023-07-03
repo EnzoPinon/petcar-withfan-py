@@ -1,0 +1,6 @@
+from fan import Fan
+# CREATE DEFAULT FAN 01
+# ASSIGN FAST 10 YELLOW ON
+# CREATE DEFAULT FAN 02
+# ASSIGN MEDIUM 5 BLUE OFF
+# DISPLAY BOTH (need new function for this.)
