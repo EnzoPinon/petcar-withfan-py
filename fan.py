@@ -60,3 +60,8 @@ class Fan:
             return print("This function 'set_radius' only accepts integers and decimals.")
         self.__radius = setting
         return print("The fan's radius has been set to: ", setting)
+    
+    def fan_construct(self):
+        new_fan = Fan(Slow, 5, False, "blue")
+        print("New fan made!")
+        return new_fan
