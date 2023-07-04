@@ -14,17 +14,19 @@ class Fan:
         return self.__speed
     
     def set_speed(self, new_speed):
-        if new_speed.lower() is 'slow':
+        if not type(new_speed) is int:
+            return print("Input must be an integer between 1-3.")
+        if new_speed is 1:
             self.__speed = Slow
-            print("Your fan speed is set to 'SLOW'!")
-        if new_speed.lower() is 'medium':
+            return print("Speed changed to SLOW!")
+        if new_speed is 2:
             self.__speed = Medium
-            print("Your fan speed is set to 'MEDIUM'!")
-        if new_speed.lower() is 'fast':
+            return print("Speed changed to MEDIUM!")
+        if new_speed is 3:
             self.__speed = Fast
-            print("Your fan speed is set to 'FAST'!")
+            return print("Speed changed to FAST!")
         else:
-            print("Invalid input. Your input must be 'slow', 'medium', or 'fast'.")
+            return print("Input must be an integer between 1-3.")
     
     def get_color(self):
         return self.__color
@@ -70,10 +72,10 @@ class Fan:
         print("--------------------Fan Info--------------------")
         print("Fan color: ", self.__color, '\nFan radius: ', self.__radius)
         if self.__speed is Slow:
-            print("Fan speed: Slow\n")
+            print("Fan speed: Slow")
         if self.__speed is Medium:
-            print("Fan speed: Medium\n")
+            print("Fan speed: Medium")
         if self.__speed is Fast:
-            print("Fan speed: Fast\n")
+            print("Fan speed: Fast")
         print("Is the fan on: ", self.__is_on)
         print('------------------------------------------------')
