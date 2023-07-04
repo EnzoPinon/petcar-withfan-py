@@ -5,9 +5,11 @@ from fan import Fan
 # ASSIGN MEDIUM 5 BLUE OFF
 # DISPLAY BOTH (need new function for this.)
 
-fan_01 = Fan.fan_construct
+#Making a random fan, which will be fan 01.
+fan_01 = Fan('slow', 5, 'off', 'white')
 
-
+# update the info of the fan to the default.
+fan_01.fan_construct
 # assign the requested fan settings
 fan_01.get_speed 
 fan_01.set_speed('fast')
