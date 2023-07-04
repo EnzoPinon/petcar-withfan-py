@@ -65,3 +65,15 @@ class Fan:
         new_fan = Fan(Slow, 5, False, "blue")
         print("New fan made!")
         return new_fan
+
+    def fan_view(self):
+        print("--------------------Fan Info--------------------")
+        print("Fan color: ", self.__color, '\nFan radius: ', self.__radius)
+        if self.__speed is 1:
+            print("Fan speed: Slow\n")
+        if self.__speed is 2:
+            print("Fan speed: Medium\n")
+        if self.__speed is 3:
+            print("Fan speed: Fast\n")
+        print("Is the fan on: ", self.__is_on)
+        print('------------------------------------------------')
