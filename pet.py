@@ -23,3 +23,11 @@ class Pet:
         self.__type = new_type
         return print("Your pet's species is now a: ", new_type)
     
+    def get_name(self):
+        return self.__name
+    
+    def set_name(self, new_name):
+        if not type(new_name) is str:
+            return print("Thus method 'set_type' only accepts string variables.")
+        self.__name = new_name
+        return print("Your pet's name is now: ", new_name)
