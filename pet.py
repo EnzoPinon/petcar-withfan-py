@@ -1,6 +1,6 @@
 class Pet:
 
-    def __init__(self, type, age, name):
+    def __init__(self):
         self.__type = 'type'
         self.__name = 'name'
         self.__age = 0
